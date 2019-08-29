@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://github.com/GeekIce">
-  <title>Tag: 交换变量 | Geek的博客</title>
+  <title>死锁 | Geek的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="东北石油大学">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Geek的博客">
-<meta property="og:url" content="https://github.com/GeekIce/tags/交换变量/index.html">
+  <meta name="description" content="死锁1.死锁：是指多个进程在运行过程中因争夺资源二造成的一种僵局，当进程处于这种僵持状态时，若无外力作用，他们都将无法在向前推进。2.产生死锁的原因：竞争不可抢占资源                  竞争消耗性资源，如消息                  进程顺序推进不当3.产生死锁的必要条件（必须同时具备下面四个条件，只要其中任意一个不成立，死锁就不会发生）：互斥，请求和保持，不可抢占，循环">
+<meta name="keywords" content="计算机,操作系统">
+<meta property="og:type" content="article">
+<meta property="og:title" content="死锁">
+<meta property="og:url" content="https://github.com/GeekIce/2019/08/10/死锁/index.html">
 <meta property="og:site_name" content="Geek的博客">
-<meta property="og:description" content="东北石油大学">
+<meta property="og:description" content="死锁1.死锁：是指多个进程在运行过程中因争夺资源二造成的一种僵局，当进程处于这种僵持状态时，若无外力作用，他们都将无法在向前推进。2.产生死锁的原因：竞争不可抢占资源                  竞争消耗性资源，如消息                  进程顺序推进不当3.产生死锁的必要条件（必须同时具备下面四个条件，只要其中任意一个不成立，死锁就不会发生）：互斥，请求和保持，不可抢占，循环">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-08-29T07:26:42.376Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Geek的博客">
-<meta name="twitter:description" content="东北石油大学">
+<meta name="twitter:title" content="死锁">
+<meta name="twitter:description" content="死锁1.死锁：是指多个进程在运行过程中因争夺资源二造成的一种僵局，当进程处于这种僵持状态时，若无外力作用，他们都将无法在向前推进。2.产生死锁的原因：竞争不可抢占资源                  竞争消耗性资源，如消息                  进程顺序推进不当3.产生死锁的必要条件（必须同时具备下面四个条件，只要其中任意一个不成立，死锁就不会发生）：互斥，请求和保持，不可抢占，循环">
   
     <link rel="alternative" href="/atom.xml" title="Geek的博客" type="application/atom+xml">
   
@@ -60,7 +62,7 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/C语言/">C语言</a></li>
+				<li><a href="/tags/计算机/">计算机</a></li>
 	        
 			</ul>
 		</nav>
@@ -132,7 +134,7 @@
 				
 					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/C语言/">C语言</a></li>
+					<li style="width: 50%"><a href="/tags/计算机/">计算机</a></li>
 		        
 				</ul>
 			</nav>
@@ -147,75 +149,235 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-死锁" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/26/hello-world/" class="archive-article-date">
-  	<time datetime="2019-07-26T04:12:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-26</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/26/hello-world/">不使用额外变量交换两个整数的值</a>
+    <h1 class="article-title" itemprop="name">
+      死锁
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/08/10/死锁/" class="archive-article-date">
+  	<time datetime="2019-08-10T02:13:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-10</time>
+</a>
+		
+		<span class="archive-article-date">
+			<i class="icon-smile icon"></i>阅读量 <span id="busuanzi_value_page_pv"></span>
+		</span>
+		
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="死锁"><a href="#死锁" class="headerlink" title="死锁"></a>死锁</h3><p>1.死锁：是指多个进程在运行过程中因争夺资源二造成的一种僵局，当进程处于这种僵持状态时，若无外力作用，他们都将无法在向前推进。<br>2.产生死锁的原因：竞争不可抢占资源<br>                  竞争消耗性资源，如消息<br>                  进程顺序推进不当<br>3.产生死锁的必要条件（必须同时具备下面四个条件，只要其中任意一个不成立，死锁就不会发生）：互斥，请求和保持，不可抢占，循环等待<br>4.处理死锁的方法：预防死锁，避免死锁，检测死锁，解除死锁。</p>
+<a id="more"></a>
+<h3 id="预防死锁"><a href="#预防死锁" class="headerlink" title="预防死锁"></a>预防死锁</h3><p>破坏“请求和保持”<br>破坏“不可抢占”<br>破坏“循环等待”</p>
+<h3 id="避免死锁：银行家算法（重点）"><a href="#避免死锁：银行家算法（重点）" class="headerlink" title="避免死锁：银行家算法（重点）"></a>避免死锁：银行家算法（重点）</h3><p>银行家算法：</p>
+<p>设Request i是进程Pi的请求向量，如果Request i[j]=K，表示进程P i需要K个R j类型的资源。当P i发出资源请求后，系统按下述步骤进行检查：</p>
+<p>(1) 如果Request i[j]&lt;=Need[i,j]，便转向步骤(2)；否则认为出错，因为它所需要的资源数已超过它所宣布的最大值。</p>
+<p>(2) 如果Request i[j]≤Available[j]，便转向步骤(3)；否则，表示尚无足够资源，Pi须等待。</p>
+<p>(3) 系统试探着把资源分配给进程P i，并修改进程需要的资源，可利用资源和进程分配资源的数值：</p>
+<pre><code>Available[j]:= Available[j]-Request i[j]；
+
+Allocation[i,j]:= Allocation[i,j]+Request i[j]；
+
+Need[i,j]:= Need[i,j]-Request i[j]；</code></pre><p>(4) 系统执行安全性算法，检查此次资源分配后系统是否处于安全状态。若安全，才正式将资源分配给进程Pi，以完成本次分配；否则，恢复原来的资源分配状态，让进程Pi等待。</p>
+<p>安全性算法：</p>
+<p> (1) 设置两个向量：</p>
+<p>　　① 工作向量Work，它表示系统可提供给进程继续运行所需的各类资源数目，它含有m个元素，在执行安全算法开始时，Work:=Available。</p>
+<p>　　② Finish，它表示系统是否有足够的资源分配给进程，使之运行完成。开始时先做Finish[i]:=false；当有足够资源分配给进程时，再令Finish[i]:=true。</p>
+<p>(2) 从进程集合中找到一个能满足下述条件的进程：</p>
+<p>　　① Finish[i]=false；</p>
+<p>　　② Need[i,j]≤Work[j]；若找到，执行步骤(3)，否则，执行步骤(4)。</p>
+<p>(3) 当进程Pi获得资源后，可顺利执行，直至完成，并释放出分配给它的资源，故应执行：</p>
+<pre><code>Work[j]:= Work[j]+Allocation[i,j]；
+
+Finish[i]:=true；
+
+go to step （2）；</code></pre><p>(4) 如果所有进程的Finish[i]=true都满足，则表示系统处于安全状态；否则，系统处于不安全状态。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/支付宝.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/微信.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C语言</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">计算机</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">交换变量</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">操作系统</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/C语言//" class="article-tag-list-link color4">C语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
+      
 
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://qr.liantu.com/api.php?text=https://github.com/GeekIce/2019/08/10/死锁/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2019/08/12/操作系统实验——随机事件模拟/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          操作系统实验——随机事件模拟
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2019/08/07/进程与线程/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">进程与线程</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="https://jjeejj.github.io/css/gitment.css">
+<script src="https://jjeejj.github.io/js/gitment.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "https://github.com/GeekIce/2019/08/10/死锁/",
+  owner: 'GeekIce',
+  repo: 'GeekIce.github.io',
+  oauth: {
+    client_id: '4cae8bd030a5624ddf03',
+    client_secret: 'd85d651a87b565a53e213da5785a5d51a6957fd8',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
+  
 
 
           </div>
@@ -249,9 +411,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
@@ -315,11 +477,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">计算机</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">计算机网络</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">C语言</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">交换变量</a>
+                <a href="javascript:void(0)" class="js-tag color5">操作系统</a>
               </li>
             
             <div class="clearfix"></div>

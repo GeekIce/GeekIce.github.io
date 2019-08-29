@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://github.com/GeekIce">
   <title>不使用额外变量交换两个整数的值 | Geek的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="异或法如果给定整数a和b，用以下三行代码即可交换a和b的值 123a=a^b;b=a^b;//b=(a^b)^b=a^(b^b)=a^0=aa=a^b;//a=(a^b)^a=b^(a^a)=b^0=b  按位异或运算, 对二进制数按位异或操作。 操作的结果是如果某位不同则该位为1, 否则该位为0。该方法缺点：只能针对变量类型为int和char的情况 求和法123a=a+b;b=a-b;//b=(">
-<meta name="keywords" content="C语言,交换变量">
+  <meta name="description" content="异或法如果给定整数a和b，用以下三行代码即可交换a和b的值 123a=a^b;b=a^b;//b=(a^b)^b=a^(b^b)=a^0=aa=a^b;//a=(a^b)^a=b^(a^a)=b^0=b  按位异或运算, 对二进制数按位异或操作。 操作的结果是如果某位不同则该位为1, 否则该位为0。该方法缺点：只能针对变量类型为int和char的情况">
+<meta name="keywords" content="计算机,C语言">
 <meta property="og:type" content="article">
 <meta property="og:title" content="不使用额外变量交换两个整数的值">
 <meta property="og:url" content="https://github.com/GeekIce/2019/07/26/hello-world/index.html">
 <meta property="og:site_name" content="Geek的博客">
-<meta property="og:description" content="异或法如果给定整数a和b，用以下三行代码即可交换a和b的值 123a=a^b;b=a^b;//b=(a^b)^b=a^(b^b)=a^0=aa=a^b;//a=(a^b)^a=b^(a^a)=b^0=b  按位异或运算, 对二进制数按位异或操作。 操作的结果是如果某位不同则该位为1, 否则该位为0。该方法缺点：只能针对变量类型为int和char的情况 求和法123a=a+b;b=a-b;//b=(">
+<meta property="og:description" content="异或法如果给定整数a和b，用以下三行代码即可交换a和b的值 123a=a^b;b=a^b;//b=(a^b)^b=a^(b^b)=a^0=aa=a^b;//a=(a^b)^a=b^(a^a)=b^0=b  按位异或运算, 对二进制数按位异或操作。 操作的结果是如果某位不同则该位为1, 否则该位为0。该方法缺点：只能针对变量类型为int和char的情况">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-08T01:18:59.086Z">
+<meta property="og:updated_time" content="2019-08-29T01:51:19.892Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="不使用额外变量交换两个整数的值">
-<meta name="twitter:description" content="异或法如果给定整数a和b，用以下三行代码即可交换a和b的值 123a=a^b;b=a^b;//b=(a^b)^b=a^(b^b)=a^0=aa=a^b;//a=(a^b)^a=b^(a^a)=b^0=b  按位异或运算, 对二进制数按位异或操作。 操作的结果是如果某位不同则该位为1, 否则该位为0。该方法缺点：只能针对变量类型为int和char的情况 求和法123a=a+b;b=a-b;//b=(">
+<meta name="twitter:description" content="异或法如果给定整数a和b，用以下三行代码即可交换a和b的值 123a=a^b;b=a^b;//b=(a^b)^b=a^(b^b)=a^0=aa=a^b;//a=(a^b)^a=b^(a^a)=b^0=b  按位异或运算, 对二进制数按位异或操作。 操作的结果是如果某位不同则该位为1, 否则该位为0。该方法缺点：只能针对变量类型为int和char的情况">
   
     <link rel="alternative" href="/atom.xml" title="Geek的博客" type="application/atom+xml">
   
@@ -62,7 +62,7 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/C语言/">C语言</a></li>
+				<li><a href="/tags/计算机/">计算机</a></li>
 	        
 			</ul>
 		</nav>
@@ -134,7 +134,7 @@
 				
 					<li style="width: 50%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/C语言/">C语言</a></li>
+					<li style="width: 50%"><a href="/tags/计算机/">计算机</a></li>
 		        
 				</ul>
 			</nav>
@@ -177,11 +177,11 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a=a^b;</span><br><span class="line">b=a^b;//b=(a^b)^b=a^(b^b)=a^0=a</span><br><span class="line">a=a^b;//a=(a^b)^a=b^(a^a)=b^0=b</span><br></pre></td></tr></table></figure>
 
 <p>按位异或运算, 对二进制数按位异或操作。 操作的结果是如果某位不同则该位为1, 否则该位为0。<br>该方法缺点：只能针对变量类型为int和char的情况</p>
+<a id="more"></a>
 <h3 id="求和法"><a href="#求和法" class="headerlink" title="求和法"></a>求和法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a=a+b;</span><br><span class="line">b=a-b;//b=(a+b)-b=a</span><br><span class="line">a=a-b;//a=(a+b)-a=b</span><br></pre></td></tr></table></figure>
 
 <p>该方法缺点：可能溢出</p>
-<h3 id="求差法"><a href="#求差法" class="headerlink" title="求差法"></a>求差法</h3><a id="more"></a>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a=b<span class="_">-a</span>;</span><br><span class="line">b=b<span class="_">-a</span>;//b=b-(b<span class="_">-a</span>)=a</span><br><span class="line">a=a+b;//a=(b<span class="_">-a</span>)+a=b</span><br></pre></td></tr></table></figure>
+<h3 id="求差法"><a href="#求差法" class="headerlink" title="求差法"></a>求差法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a=b<span class="_">-a</span>;</span><br><span class="line">b=b<span class="_">-a</span>;//b=b-(b<span class="_">-a</span>)=a</span><br><span class="line">a=a+b;//a=(b<span class="_">-a</span>)+a=b</span><br></pre></td></tr></table></figure>
 
 <p>该方法缺点：可能溢出</p>
 
@@ -228,28 +228,17 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C语言</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">计算机</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">交换变量</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C语言</a>
         		</li>
       		
 		</ul>
 	</div>
 
       
-	<div class="article-category tagcloud">
-		<i class="icon-book icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="/categories/C语言//" class="article-tag-list-link color4">C语言</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
 
       
 
@@ -311,6 +300,20 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2019/07/28/TCP和UDP/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          TCP和UDP
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -454,11 +457,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">计算机</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">计算机网络</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">C语言</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">交换变量</a>
+                <a href="javascript:void(0)" class="js-tag color5">操作系统</a>
               </li>
             
             <div class="clearfix"></div>
