@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://github.com/GeekIce">
   <title>操作系统实验——银行家算法 | Geek的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="###银行家算法（1）判断请求向量是否小于进程需要的资源，若小于，转向第二步；若大于，则提示它所需要的资源数已超过它所宣布的最大值。 （2）判断请求向量是否小于系统可利用资源向量，若小于，转向第三步；否则，该进程需等待。 （3）系统试探把资源分配给进程，并修改进程需要的资源，可利用资源和进程分配资源的数值 Available[j]:= Available[j]-Request i[j]；  All">
+  <meta name="description" content="###银行家算法（1）判断请求向量是否小于进程需要的资源，若小于，转向第二步；若大于，则提示它所需要的资源数已超过它所宣布的最大值。（2）判断请求向量是否小于系统可利用资源向量，若小于，转向第三步；否则，该进程需等待。（3）系统试探把资源分配给进程，并修改进程需要的资源，可利用资源和进程分配资源的数值 Available[j]:= Available[j]-Request i[j]；  Alloc">
 <meta name="keywords" content="计算机,操作系统">
 <meta property="og:type" content="article">
 <meta property="og:title" content="操作系统实验——银行家算法">
 <meta property="og:url" content="https://github.com/GeekIce/2019/08/02/操作系统实验——银行家算法/index.html">
 <meta property="og:site_name" content="Geek的博客">
-<meta property="og:description" content="###银行家算法（1）判断请求向量是否小于进程需要的资源，若小于，转向第二步；若大于，则提示它所需要的资源数已超过它所宣布的最大值。 （2）判断请求向量是否小于系统可利用资源向量，若小于，转向第三步；否则，该进程需等待。 （3）系统试探把资源分配给进程，并修改进程需要的资源，可利用资源和进程分配资源的数值 Available[j]:= Available[j]-Request i[j]；  All">
+<meta property="og:description" content="###银行家算法（1）判断请求向量是否小于进程需要的资源，若小于，转向第二步；若大于，则提示它所需要的资源数已超过它所宣布的最大值。（2）判断请求向量是否小于系统可利用资源向量，若小于，转向第三步；否则，该进程需等待。（3）系统试探把资源分配给进程，并修改进程需要的资源，可利用资源和进程分配资源的数值 Available[j]:= Available[j]-Request i[j]；  Alloc">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-29T07:28:05.473Z">
+<meta property="og:updated_time" content="2019-08-30T06:10:13.586Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="操作系统实验——银行家算法">
-<meta name="twitter:description" content="###银行家算法（1）判断请求向量是否小于进程需要的资源，若小于，转向第二步；若大于，则提示它所需要的资源数已超过它所宣布的最大值。 （2）判断请求向量是否小于系统可利用资源向量，若小于，转向第三步；否则，该进程需等待。 （3）系统试探把资源分配给进程，并修改进程需要的资源，可利用资源和进程分配资源的数值 Available[j]:= Available[j]-Request i[j]；  All">
+<meta name="twitter:description" content="###银行家算法（1）判断请求向量是否小于进程需要的资源，若小于，转向第二步；若大于，则提示它所需要的资源数已超过它所宣布的最大值。（2）判断请求向量是否小于系统可利用资源向量，若小于，转向第三步；否则，该进程需等待。（3）系统试探把资源分配给进程，并修改进程需要的资源，可利用资源和进程分配资源的数值 Available[j]:= Available[j]-Request i[j]；  Alloc">
   
     <link rel="alternative" href="/atom.xml" title="Geek的博客" type="application/atom+xml">
   
@@ -173,9 +173,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>###银行家算法<br>（1）判断请求向量是否小于进程需要的资源，若小于，转向第二步；若大于，则提示它所需要的资源数已超过它所宣布的最大值。</p>
-<p>（2）判断请求向量是否小于系统可利用资源向量，若小于，转向第三步；否则，该进程需等待。</p>
-<p>（3）系统试探把资源分配给进程，并修改进程需要的资源，可利用资源和进程分配资源的数值</p>
+        <p>###银行家算法<br>（1）判断请求向量是否小于进程需要的资源，若小于，转向第二步；若大于，则提示它所需要的资源数已超过它所宣布的最大值。<br>（2）判断请求向量是否小于系统可利用资源向量，若小于，转向第三步；否则，该进程需等待。<br>（3）系统试探把资源分配给进程，并修改进程需要的资源，可利用资源和进程分配资源的数值</p>
 <pre><code>Available[j]:= Available[j]-Request i[j]；
 
 Allocation[i,j]:= Allocation[i,j]+Request i[j]；
@@ -303,11 +301,11 @@ Need[i,j]:= Need[i,j]-Request i[j]；</code></pre><p>(4) 系统执行安全性�
   
 <nav id="article-nav">
   
-    <a href="/2019/08/05/操作系统实验————虚拟存储器管理/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/08/04/多个生产者消费者程序/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          操作系统实验————虚拟存储器管理
+          多个生产者消费者程序
         
       </div>
     </a>
