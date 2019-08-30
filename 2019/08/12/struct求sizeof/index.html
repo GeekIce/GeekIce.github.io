@@ -8,18 +8,18 @@
   <link rel="dns-prefetch" href="https://github.com/GeekIce">
   <title>struct求sizeof | Geek的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="struct求sizeof三个准则1.首地址的要求：结构体变量的首地址能够被其最宽基本类型成员的大小所整除2.成员要求：结构体中的每个成员相对于结构体首地址的偏移量都是成员大小的整数倍3.总大小要求：结构体总大小为结构体中最宽基本类型成员大小的整数倍。 举例说明：">
+  <meta name="description" content="struct求sizeof三个准则1.首地址的要求：结构体变量的首地址能够被其最宽基本类型成员的大小所整除2.成员要求：结构体中的每个成员相对于结构体首地址的偏移量都是成员大小的整数倍3.总大小要求：结构体总大小为结构体中最宽基本类型成员大小的整数倍。举例说明：">
 <meta name="keywords" content="计算机,C语言">
 <meta property="og:type" content="article">
 <meta property="og:title" content="struct求sizeof">
 <meta property="og:url" content="https://github.com/GeekIce/2019/08/12/struct求sizeof/index.html">
 <meta property="og:site_name" content="Geek的博客">
-<meta property="og:description" content="struct求sizeof三个准则1.首地址的要求：结构体变量的首地址能够被其最宽基本类型成员的大小所整除2.成员要求：结构体中的每个成员相对于结构体首地址的偏移量都是成员大小的整数倍3.总大小要求：结构体总大小为结构体中最宽基本类型成员大小的整数倍。 举例说明：">
+<meta property="og:description" content="struct求sizeof三个准则1.首地址的要求：结构体变量的首地址能够被其最宽基本类型成员的大小所整除2.成员要求：结构体中的每个成员相对于结构体首地址的偏移量都是成员大小的整数倍3.总大小要求：结构体总大小为结构体中最宽基本类型成员大小的整数倍。举例说明：">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-30T07:55:33.262Z">
+<meta property="og:updated_time" content="2019-08-30T08:24:49.655Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="struct求sizeof">
-<meta name="twitter:description" content="struct求sizeof三个准则1.首地址的要求：结构体变量的首地址能够被其最宽基本类型成员的大小所整除2.成员要求：结构体中的每个成员相对于结构体首地址的偏移量都是成员大小的整数倍3.总大小要求：结构体总大小为结构体中最宽基本类型成员大小的整数倍。 举例说明：">
+<meta name="twitter:description" content="struct求sizeof三个准则1.首地址的要求：结构体变量的首地址能够被其最宽基本类型成员的大小所整除2.成员要求：结构体中的每个成员相对于结构体首地址的偏移量都是成员大小的整数倍3.总大小要求：结构体总大小为结构体中最宽基本类型成员大小的整数倍。举例说明：">
   
     <link rel="alternative" href="/atom.xml" title="Geek的博客" type="application/atom+xml">
   
@@ -173,8 +173,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="struct求sizeof三个准则"><a href="#struct求sizeof三个准则" class="headerlink" title="struct求sizeof三个准则"></a>struct求sizeof三个准则</h3><p>1.首地址的要求：结构体变量的首地址能够被其最宽基本类型成员的大小所整除<br>2.成员要求：结构体中的每个成员相对于结构体首地址的偏移量都是成员大小的整数倍<br>3.总大小要求：结构体总大小为结构体中最宽基本类型成员大小的整数倍。</p>
-<p>举例说明：</p>
+        <h3 id="struct求sizeof三个准则"><a href="#struct求sizeof三个准则" class="headerlink" title="struct求sizeof三个准则"></a>struct求sizeof三个准则</h3><p>1.首地址的要求：结构体变量的首地址能够被其最宽基本类型成员的大小所整除<br>2.成员要求：结构体中的每个成员相对于结构体首地址的偏移量都是成员大小的整数倍<br>3.总大小要求：结构体总大小为结构体中最宽基本类型成员大小的整数倍。<br>举例说明：</p>
 <a id="more"></a>
 <p>例题一：在32位机器上有如下结构体，求sizeof(s)大小为多少？</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">struct s</span><br><span class="line">&#123;</span><br><span class="line">     long long a1;</span><br><span class="line">     char a2;</span><br><span class="line">     int a3;</span><br><span class="line">     char a4[2];</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
@@ -183,9 +182,13 @@
 <p>例题2：有如下代码，求语句printf(“%d\n”, sizeof(too) + sizeof(max))执行结果是什么？</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;stdio.h&gt;</span></span><br><span class="line">typedef union</span><br><span class="line">&#123;</span><br><span class="line">	long i;</span><br><span class="line">	int k[5];</span><br><span class="line">	char c;</span><br><span class="line">&#125;DATE;</span><br><span class="line">struct data</span><br><span class="line">&#123;</span><br><span class="line">	int cat;</span><br><span class="line">	DATE cow;</span><br><span class="line">	double dog;</span><br><span class="line">&#125;too;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	DATE max;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%d\n"</span>, sizeof(too) + sizeof(max));</span><br><span class="line">	<span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<pre><code>由于自己在做这道题时，也不确定答案是52还是64，然后通过测试，答案为52。下面我来说一下原因：
-在union结构中所有变量共用同一个空间，union求sizeof通常取成员变量的最大值。本题中最大的变量为int k[5] ，</code></pre><p>int k[5]占4*5=20个字节，所以sizeof(max)为20字节。<br>       在struct date结构中，cat占4个字节，cow占20个字节，dog占8个字节，一共32个字节。<br>所以sizeof(too)+sizeof(max) 等于20+32 等于52 。</p>
 
+
+
+
+<pre><code>由于自己在做这道题时，也不确定答案是52还是64，后来经过测试后，得到正确答案为52。下面我来说一下原因：
+在union结构中，所有变量共用同一个控件，uonion求sizeof通常取其成员变量的最大值。本题中，长度最大的变量为int k[5]，int k[5]占4*5=20个字节，所以sizeof(max)为20字节。
+在结构体too中，cat占4字节，cow占20字节，dog占8字节，一共32字节。所以sizeof(too)+sizeof(max) 等于20+32 等于52 。</code></pre>
       
 
       
@@ -467,11 +470,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">C语言</a>
+                <a href="javascript:void(0)" class="js-tag color1">计算机网络</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">计算机网络</a>
+                <a href="javascript:void(0)" class="js-tag color4">C语言</a>
               </li>
              
               <li class="article-tag-list-item">
