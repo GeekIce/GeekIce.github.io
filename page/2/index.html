@@ -149,32 +149,29 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-死锁" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/26/hello-world/">不使用额外变量交换两个整数的值</a>
+      <a class="article-title" href="/2019/07/26/死锁/">死锁</a>
     </h1>
   
 
         
-        <a href="/2019/07/26/hello-world/" class="archive-article-date">
-  	<time datetime="2019-07-26T04:12:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-26</time>
+        <a href="/2019/07/26/死锁/" class="archive-article-date">
+  	<time datetime="2019-07-26T02:13:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-26</time>
 </a>
 		
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="异或法"><a href="#异或法" class="headerlink" title="异或法"></a>异或法</h3><p>如果给定整数a和b，用以下三行代码即可交换a和b的值</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a=a^b;</span><br><span class="line">b=a^b;//b=(a^b)^b=a^(b^b)=a^0=a</span><br><span class="line">a=a^b;//a=(a^b)^a=b^(a^a)=b^0=b</span><br></pre></td></tr></table></figure>
-
-<p>按位异或运算, 对二进制数按位异或操作。 操作的结果是如果某位不同则该位为1, 否则该位为0。<br>该方法缺点：只能针对变量类型为int和char的情况</p>
+        <h3 id="死锁"><a href="#死锁" class="headerlink" title="死锁"></a>死锁</h3><p>1.死锁：是指多个进程在运行过程中因争夺资源二造成的一种僵局，当进程处于这种僵持状态时，若无外力作用，他们都将无法在向前推进。<br>2.产生死锁的原因：竞争不可抢占资源<br>                  竞争消耗性资源，如消息<br>                  进程顺序推进不当<br>3.产生死锁的必要条件（必须同时具备下面四个条件，只要其中任意一个不成立，死锁就不会发生）：互斥，请求和保持，不可抢占，循环等待<br>4.处理死锁的方法：预防死锁，避免死锁，检测死锁，解除死锁。</p>
         
-          <a class="article-more-a" href="/2019/07/26/hello-world/#more">more >></a>
+          <a class="article-more-a" href="/2019/07/26/死锁/#more">more >></a>
         
       
 
@@ -192,7 +189,7 @@
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C语言</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">操作系统</a>
         		</li>
       		
 		</ul>
@@ -202,7 +199,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/07/26/hello-world/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/07/26/死锁/">展开全文 >></a>
         </p>
       
 
@@ -340,11 +337,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">计算机网络</a>
+                <a href="javascript:void(0)" class="js-tag color4">C语言</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">C语言</a>
+                <a href="javascript:void(0)" class="js-tag color1">计算机网络</a>
               </li>
              
               <li class="article-tag-list-item">

@@ -8,17 +8,18 @@
   <link rel="dns-prefetch" href="https://github.com/GeekIce">
   <title>斐波那契数列 | Geek的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="东北石油大学">
+  <meta name="description" content="牛客网剑指斐波那契数列题目描述：大家都知道斐波那契数列，现在要求输入一个整数n，请你输出斐波那契数列的第n项（从0开始，第0项为0）。（n&amp;lt;=39）解题：在刚开始自己做这道题时，直接用暴力的递归算法解决，时间复杂度（O（2^N））。">
+<meta name="keywords" content="计算机">
 <meta property="og:type" content="article">
 <meta property="og:title" content="斐波那契数列">
 <meta property="og:url" content="https://github.com/GeekIce/2019/08/14/斐波那契数列/index.html">
 <meta property="og:site_name" content="Geek的博客">
-<meta property="og:description" content="东北石油大学">
+<meta property="og:description" content="牛客网剑指斐波那契数列题目描述：大家都知道斐波那契数列，现在要求输入一个整数n，请你输出斐波那契数列的第n项（从0开始，第0项为0）。（n&amp;lt;=39）解题：在刚开始自己做这道题时，直接用暴力的递归算法解决，时间复杂度（O（2^N））。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-30T07:01:50.938Z">
+<meta property="og:updated_time" content="2019-08-30T08:05:52.281Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="斐波那契数列">
-<meta name="twitter:description" content="东北石油大学">
+<meta name="twitter:description" content="牛客网剑指斐波那契数列题目描述：大家都知道斐波那契数列，现在要求输入一个整数n，请你输出斐波那契数列的第n项（从0开始，第0项为0）。（n&amp;lt;=39）解题：在刚开始自己做这道题时，直接用暴力的递归算法解决，时间复杂度（O（2^N））。">
   
     <link rel="alternative" href="/atom.xml" title="Geek的博客" type="application/atom+xml">
   
@@ -172,7 +173,69 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>牛客网剑指斐波那契数列题目描述：<br>大家都知道斐波那契数列，现在要求输入一个整数n，请你输出斐波那契数列的第n项（从0开始，第0项为0）。（n&lt;=39）<br>解题：<br>在刚开始自己做这道题时，直接用暴力的递归算法解决，时间复杂度（O（2^N））。</p>
+<a id="more"></a>
+<pre><code class="bash">class Solution {
+public:
+    int Fibonacci(int n) {
+        <span class="keyword">if</span>(n&lt;1)
+            <span class="built_in">return</span> 0;
+        <span class="keyword">if</span>(n==1||n==2)
+            <span class="built_in">return</span> 1;
+        <span class="built_in">return</span> Fibonacci(n-1)+Fibonacci(n-2) ;
+    }
+};</code></pre>
+<p>后来在左程云《程序员代码面试指南》看到本题的最优解法，时间复杂度为O(logN)。理解后，改写成下面C++代码，本题解题思路不详细说明，如果不理解，可以参考左程云《程序员代码面试指南》。</p>
+<pre><code class="bash">class Solution {
+public:
+    vector&lt;vector&lt;int&gt; &gt; matrixPower(vector&lt;vector&lt;int&gt; &gt; m1,vector&lt;vector&lt;int&gt; &gt; m2)
+{
+    vector&lt;vector&lt;int&gt; &gt; res(m1.size(),vector&lt;int&gt;(m2[0].size()));
+    <span class="keyword">for</span>(int i=0;i&lt;m2[0].size();i++)
+    {
+        <span class="keyword">for</span>(int j=0;j&lt;m1[0].size();j++)
+        {
+            <span class="keyword">for</span>(int k=0;k&lt;m2.size();k++)
+            {
+                res[i][j]+=m1[i][k]*m2[j][k];
+            }
+        }
+    }
+    <span class="built_in">return</span> res;
+}
+vector&lt;vector&lt;int&gt; &gt; matrix(vector&lt;vector&lt;int&gt; &gt; m,int p)
+{
+    vector&lt;vector&lt;int&gt; &gt; res(m.size(),vector&lt;int&gt;(m[0].size()));
+    <span class="keyword">for</span>(int i=0;i&lt;res.size();i++)
+        res[i][i]=1;
+    vector&lt;vector&lt;int&gt; &gt; tmp=m;
+    <span class="keyword">for</span>(;p!=0;p=p&gt;&gt;1)
+    {
+        <span class="keyword">if</span>((p&amp;1)!=0)
+        {
+            res=matrixPower(res,tmp);
+        }
+        tmp=matrixPower(tmp,tmp);
+    }
+    <span class="built_in">return</span> res;
+}
+    int Fibonacci(int n) {
+        <span class="keyword">if</span>(n&lt;1)
+            <span class="built_in">return</span> 0;
+        <span class="keyword">if</span>(n==1||n==2)
+            <span class="built_in">return</span> 1;
+        vector&lt;vector&lt;int&gt; &gt; base(2,vector&lt;int&gt;(2));
+        //int base[2][2]={{1,1},{1,0}};
+        base[0][0]=1;
+        base[0][1]=1;
+        base[1][0]=1;
+        base[1][1]=0;
+        vector&lt;vector&lt;int&gt; &gt; res;
+        res=matrix(base,n-2);
+        <span class="built_in">return</span> res[0][0]+res[1][0];
+    }
+};</code></pre>
+
       
 
       
@@ -211,6 +274,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">计算机</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -430,11 +504,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">计算机网络</a>
+                <a href="javascript:void(0)" class="js-tag color4">C语言</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">C语言</a>
+                <a href="javascript:void(0)" class="js-tag color1">计算机网络</a>
               </li>
              
               <li class="article-tag-list-item">
