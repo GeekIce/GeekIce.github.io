@@ -149,87 +149,6 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-二叉树的遍历" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/09/02/二叉树的遍历/">二叉树的遍历</a>
-    </h1>
-  
-
-        
-        <a href="/2019/09/02/二叉树的遍历/" class="archive-article-date">
-  	<time datetime="2019-09-02T00:40:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-02</time>
-</a>
-		
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>二叉树是比较重要的结构，此篇文章主要讲解二叉树的递归及非递归遍历。（二叉树的非递归遍历参考左程云《程序员代码面试指南》），代码如下</p>
-<h3 id="二叉树存储结构"><a href="#二叉树存储结构" class="headerlink" title="二叉树存储结构"></a>二叉树存储结构</h3><p>typedef struct Tree<br>{<br>    int data;<br>    struct Tree *left;//左孩子<br>    struct Tree *right;//右孩子<br>}</p>
-        
-          <a class="article-more-a" href="/2019/09/02/二叉树的遍历/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">计算机</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/09/02/二叉树的遍历/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-进程与线程" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -413,7 +332,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="用邻接矩阵创建无权值的有向图"><a href="#用邻接矩阵创建无权值的有向图" class="headerlink" title="用邻接矩阵创建无权值的有向图"></a>用邻接矩阵创建无权值的有向图</h3>
+        <h3 id="用邻接矩阵创建无权值的有向图"><a href="#用邻接矩阵创建无权值的有向图" class="headerlink" title="用邻接矩阵创建无权值的有向图"></a>用邻接矩阵创建无权值的有向图</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include&lt;iostream&gt;</span></span><br><span class="line">using namespace std;</span><br><span class="line"><span class="comment">#define max_num 4</span></span><br><span class="line"><span class="comment">#define INFINITY 32768</span></span><br><span class="line">typedef struct V</span><br><span class="line">&#123;</span><br><span class="line">	char no;//顶点编号</span><br><span class="line">	char info;//顶点信息</span><br><span class="line">	int weight;//顶点权重</span><br><span class="line">&#125;Vex;</span><br><span class="line">typedef struct G</span><br><span class="line">&#123;</span><br><span class="line">	int vexs_num;//图的顶点数</span><br><span class="line">	int arc_num;//图的弧数</span><br><span class="line">	int arc[max_num][max_num];</span><br><span class="line">	Vex vexs[max_num];</span><br><span class="line">&#125;Graph;</span><br><span class="line">int locate_position(Graph g,char v)</span><br><span class="line">&#123;</span><br><span class="line">	int j=-1;</span><br><span class="line">	<span class="keyword">for</span>(int i=0;i&lt;g.vexs_num;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(g.vexs[i].info==v)</span><br><span class="line">		&#123;</span><br><span class="line">			j=i;</span><br><span class="line">			<span class="built_in">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">return</span> j;</span><br><span class="line">&#125;</span><br><span class="line">void Create_Graph(Graph &amp;g)</span><br><span class="line">&#123;</span><br><span class="line">	int i,j,k;</span><br><span class="line">	cout&lt;&lt;<span class="string">"请输入图的顶点数和弧数："</span>&lt;&lt;endl;</span><br><span class="line">	cin&gt;&gt;g.vexs_num&gt;&gt;g.arc_num;</span><br><span class="line">	<span class="keyword">for</span>(i=0;i&lt;g.vexs_num;i++)//初始化顶点信息</span><br><span class="line">	&#123;</span><br><span class="line">		g.vexs[i].no=i;</span><br><span class="line">		g.vexs[i].info=<span class="string">'A'</span>+i;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">for</span>(i=0;i&lt;g.vexs_num;i++)//顶点到顶点的距离设为无穷大</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span>(j=0;j&lt;g.vexs_num;j++)</span><br><span class="line">		&#123;</span><br><span class="line">			g.arc[i][j]=INFINITY;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	char v1,v2;</span><br><span class="line">	int weight=0;</span><br><span class="line">	cout&lt;&lt;<span class="string">"请输入弧尾，弧头，距离"</span>&lt;&lt;endl;</span><br><span class="line">	<span class="keyword">for</span>(i=0;i&lt;g.arc_num;i++)</span><br><span class="line">	&#123;</span><br><span class="line">		cin&gt;&gt;v1&gt;&gt;v2&gt;&gt;weight;</span><br><span class="line">		j=locate_position(g,v1);</span><br><span class="line">		k=locate_position(g,v2);</span><br><span class="line">		g.arc[j][k]=weight;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">void Disp_Graph(Graph g)  //图的邻接矩阵存储方式输出</span><br><span class="line">&#123;	</span><br><span class="line">	int i,j;	</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"\n图的邻接矩阵存储\n"</span>);	</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"图的顶点数为：%d,图的弧数为：%d\n"</span>,g.vexs_num,g.arc_num);</span><br><span class="line">	<span class="keyword">for</span>(i=0;i &lt;g.vexs_num;i++)	</span><br><span class="line">	&#123;		</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"编号%d的顶点%c:"</span>,g.vexs[i].no,g.vexs[i].info);		</span><br><span class="line">		<span class="keyword">for</span>(j=0;j &lt; g.vexs_num;j++)			</span><br><span class="line">			<span class="built_in">printf</span>(<span class="string">"%d "</span>,g.arc[i][j]);  //没有权,这里的链表只输出邻接顶点编号	</span><br><span class="line">		<span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	Graph g;</span><br><span class="line">	Create_Graph(g);</span><br><span class="line">	Disp_Graph(g);</span><br><span class="line">	<span class="built_in">return</span> 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
         
           <a class="article-more-a" href="/2019/07/02/图/#more">more >></a>
         
@@ -444,6 +363,87 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/07/02/图/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-二叉树的遍历" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/07/01/二叉树的遍历/">二叉树的遍历</a>
+    </h1>
+  
+
+        
+        <a href="/2019/07/01/二叉树的遍历/" class="archive-article-date">
+  	<time datetime="2019-07-01T00:40:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-01</time>
+</a>
+		
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>二叉树是比较重要的结构，此篇文章主要讲解二叉树的递归及非递归遍历。（二叉树的非递归遍历参考左程云《程序员代码面试指南》），代码如下</p>
+<h3 id="二叉树存储结构"><a href="#二叉树存储结构" class="headerlink" title="二叉树存储结构"></a>二叉树存储结构</h3><p>typedef struct Tree<br>{<br>    int data;<br>    struct Tree *left;//左孩子<br>    struct Tree *right;//右孩子<br>}</p>
+        
+          <a class="article-more-a" href="/2019/07/01/二叉树的遍历/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">计算机</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/07/01/二叉树的遍历/">展开全文 >></a>
         </p>
       
 
@@ -1071,15 +1071,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">计算机网络</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">C语言</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">计算机网络</a>
               </li>
              
               <li class="article-tag-list-item">
