@@ -149,6 +149,254 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-操作系统实验——随机事件模拟" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/28/操作系统实验——随机事件模拟/">操作系统实验——随机事件模拟</a>
+    </h1>
+  
+
+        
+        <a href="/2019/05/28/操作系统实验——随机事件模拟/" class="archive-article-date">
+  	<time datetime="2019-05-28T04:15:41.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-28</time>
+</a>
+		
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>###题目描述：<br>       模拟银行的业务处理过程，银行有三个窗口，每天8点开门，12点关门，银行业务主要包括两种：存钱和取钱，每件业务的处理时间为3-5分钟。<br>解题思路：<br>       本程序关键函数为函数rom()。程序开始利用函数rand()随机产生当前时间，然后判断时间是否在8：00–<br>12：00之间，若不在，则程序结束；若在，则进入函数rom(),首先将三个窗口分别编号1，2，3，并且将是<br>三个窗口办理业务的人数均初始化为0。然后进入while循环，首先判断时间是否满足条件，若不满足，则退<br>出程序；若满足，利用函数rand()随机产生每分钟进来的人数，比较三个窗口的人数，将新来办理业务的人<br>分别安排到三个窗口办理业务人数最少的一个窗口，给每个窗口未办理业务或正在办理业务的人的编号，并<br>将当前每个窗口的人数加一，用sum1统计银行从营业到关门这一时间段内来银行办理业务总人数，然后显<br>示三个窗口的业务办理情况及每个窗口的排队情况。每次循环分钟加一，直到时间到12点程序结束。</p>
+<p>###代码如下：</p>
+        
+          <a class="article-more-a" href="/2019/05/28/操作系统实验——随机事件模拟/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">计算机</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">操作系统</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/05/28/操作系统实验——随机事件模拟/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-操作系统实验——银行家算法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/18/操作系统实验——银行家算法/">操作系统实验——银行家算法</a>
+    </h1>
+  
+
+        
+        <a href="/2019/05/18/操作系统实验——银行家算法/" class="archive-article-date">
+  	<time datetime="2019-05-18T02:09:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-18</time>
+</a>
+		
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>###银行家算法<br>（1）判断请求向量是否小于进程需要的资源，若小于，转向第二步；若大于，则提示它所需要的资源数已超过它所宣布的最大值。<br>（2）判断请求向量是否小于系统可利用资源向量，若小于，转向第三步；否则，该进程需等待。<br>（3）系统试探把资源分配给进程，并修改进程需要的资源，可利用资源和进程分配资源的数值</p>
+<pre><code>Available[j]:= Available[j]-Request i[j]；
+
+Allocation[i,j]:= Allocation[i,j]+Request i[j]；
+
+Need[i,j]:= Need[i,j]-Request i[j]；</code></pre><p>(4) 系统执行安全性算法，检查此次资源分配后系统是否处于安全状态。若安全，才正式将资源分配给进程；否则，恢复进程原来的资源分配状态，让进程Pi等待。</p>
+<p>###代码如下：</p>
+        
+          <a class="article-more-a" href="/2019/05/18/操作系统实验——银行家算法/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">计算机</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">操作系统</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/05/18/操作系统实验——银行家算法/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-和-区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/05/06/和-区别/">&amp;和&amp;&amp;区别</a>
+    </h1>
+  
+
+        
+        <a href="/2019/05/06/和-区别/" class="archive-article-date">
+  	<time datetime="2019-05-06T09:09:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-05-06</time>
+</a>
+		
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="按位与运算符-amp"><a href="#按位与运算符-amp" class="headerlink" title="按位与运算符&amp;"></a>按位与运算符&amp;</h3><p>&amp;是按位与运算，x&amp;y是把x和y都转换成二进制数后，然后再进行按位与的运算.当参与位运算的值都为1时，运算结果为1，否则，运算结果为0.</p>
+<h3 id="逻辑与操作符-amp-amp"><a href="#逻辑与操作符-amp-amp" class="headerlink" title="逻辑与操作符&amp;&amp;"></a>逻辑与操作符&amp;&amp;</h3><p>&amp;&amp;是逻辑与操作符，x&amp;&amp;y是x和y均为真时，结果才为真；否则只要有一个操作数为假，结果就为假。<br>扩展：&amp;&amp;还具有短路功能，在参与运算的两个表达式中，只有当第一个表达式的返回值为真的时候，才会计算地热个表达式的值，如果第二个表达式的返回值为假，&amp;&amp;运算的结果为假，并不会去计算第二个表达式的值。</p>
+        
+          <a class="article-more-a" href="/2019/05/06/和-区别/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">计算机</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C语言</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/05/06/和-区别/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="n-多个生产者消费者程序" class="article article-type-n  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -200,6 +448,165 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2019/05/04/多个生产者消费者程序/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-队列和栈" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/28/队列和栈/">队列和栈</a>
+    </h1>
+  
+
+        
+        <a href="/2019/04/28/队列和栈/" class="archive-article-date">
+  	<time datetime="2019-04-28T00:38:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-28</time>
+</a>
+		
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h3><p>队列是一种特殊的线性表，只允许在队头进行删除操作，而在队尾进行插入操作，和栈一样，队列是一种操作受限制的线性表。<br>队列类似于在车站购票，购票结束的人在对头离开，想要购票的人在队尾依次排队购票。</p>
+<h3 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h3><p>它是把新元素放到栈顶元素的上面，使之成为新的栈顶元素；从一个栈删除元素，它是把栈顶元素删除掉。<br>栈类似于向水杯中放东西，要想拿出想要的东西，只能将其上面的东西都拿出来后才能拿出该东西；要想往水杯中放东西，只能放在最上面。</p>
+        
+          <a class="article-more-a" href="/2019/04/28/队列和栈/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">计算机</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/04/28/队列和栈/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="n-链表与数组的区别" class="article article-type-n  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/27/链表与数组的区别/">链表与数组的区别</a>
+    </h1>
+  
+
+        
+        <a href="/2019/04/27/链表与数组的区别/" class="archive-article-date">
+  	<time datetime="2019-04-27T00:36:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-04-27</time>
+</a>
+		
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="数组与链表的比较"><a href="#数组与链表的比较" class="headerlink" title="数组与链表的比较"></a>数组与链表的比较</h3><p>1.数组的地址是连续的<br>   链表的地址不连续<br>2.数组静态分配内存<br>   链表动态分配内存<br>3.数组查找数据比链表快<br>数组查找数据的时间复杂度为O(1)<br>链表查找数据的时间复杂度为O(N)<br>4.链表的删除，插入操作比数组快<br>数组的删除，插入操作时间复杂度为O(N)<br>链表的删除，插入操作时间复杂度为O(1)</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">计算机</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">C语言</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/04/27/链表与数组的区别/">展开全文 >></a>
         </p>
       
 
@@ -413,11 +820,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">计算机网络</a>
+                <a href="javascript:void(0)" class="js-tag color4">C语言</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">C语言</a>
+                <a href="javascript:void(0)" class="js-tag color5">数据结构</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">计算机网络</a>
               </li>
              
               <li class="article-tag-list-item">
